@@ -44,6 +44,8 @@ class newsController
 		// run the func
 		$response = $methodModel->run();
 
+		header("Access-Control-Allow-Origin: *");
+
 		// display the data as json
 		echo json_encode($response);
 	}

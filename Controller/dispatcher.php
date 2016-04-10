@@ -13,7 +13,7 @@ class dispatcher {
 
 	function run() {
 
-		// authoraization 
+		// authoraization
 		require_once $this->sysRoot . '/Auth/authCheck.php';
 
 		// 末端の / を削除
@@ -21,7 +21,7 @@ class dispatcher {
 			$param = rtrim($_SERVER['REQUEST_URI'], '/');
 		}
 
-		$params = array();	
+		$params = array();
 
 		// パラメータを /　で分割
 		if($param != '') {
@@ -40,6 +40,7 @@ class dispatcher {
 
 		// redirect if user is not logined
 		$auth = new authCheck($controller, $_SERVER["REQUEST_METHOD"]);
+
 		if($auth->isLogined()) {
 
 			// Controllerのインスタンス化
@@ -82,16 +83,16 @@ class dispatcher {
 						require_once $this->sysRoot . '/Controller/loginController.php';
 						$controllerInstance = new loginController($this->sysRoot);
 					}
-					break;	
+					break;
 
-				case 'truncate': 
+				case 'truncate':
 					if($_SERVER['REQUEST_METHOD'] == 'DELETE') {
 						require_once $this->sysRoot . '/Controller/truncateController.php';
 						$controllerInstance = new truncateController($this->sysRoot);
 					}
 					break;
 
-				default: 
+				default:
 					header('Location: /');
 					exit;
 					break;

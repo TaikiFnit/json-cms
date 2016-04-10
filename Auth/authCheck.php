@@ -6,9 +6,11 @@
 class authCheck {
 
 	private $controller;
-	
-	function __construct($c) {
+	private $method;
+
+	function __construct($c, $m) {
 		$this->controller = $c;
+		$this->method = $m;
 	}
 
 	public function isLogined()
@@ -35,6 +37,10 @@ class authCheck {
 		if ($this->controller == 'login') {
 			// this user try to login
 			return true;
+		}
+
+		if ($this->controller == 'news' && $this->method == 'GET') {
+			return ture;
 		}
 
 		// but access
