@@ -1,0 +1,12 @@
+<?php
+
+// DB接続に必要な設定
+define('DB_NAME', 'json-cms');
+define('DSN', 'mysql:host=localhost;dbname=' . DB_NAME);
+define('DB_USER', 'user');
+define('DB_PASSWORD', 'password');
+
+// 画像の保存に関する設定
+define('NEWS_IMAGE_PATH', '/news_image/');
+
+error_reporting(E_ALL & ~E_NOTICE);

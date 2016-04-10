@@ -1,0 +1,112 @@
+@charset "utf8";
+
+/* load web font roboto*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+
+/* load web font NotoSans */
+@font-face {
+  font-family: "NotoSans";
+  src: url('/fonts/NotoSansCJKjp-Light.eot');
+  src: url('/fonts/NotoSansCJKjp-Light.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/NotoSansCJKjp-Light.woff') format('woff'),
+       url('/fonts/NotoSansCJKjp-Light.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* 推奨サイズ */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+ 
+  /* WebKitブラウザサポート */
+  -webkit-font-smoothing: antialiased;
+  /* Chrome、Safariサポート */
+  text-rendering: optimizeLegibility;
+ 
+  /* Firefoxサポート */
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* IEサポート */
+  font-feature-settings: 'liga';
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+    width: 100%;
+     font-family: 'Roboto', Roboto, 'NotoSans', NotoSans, sans-serif;
+}
+
+header.navbar {
+	min-height: 30px;
+	background: #009688;
+}
+
+h1{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+h1 a {
+	color: white;
+}
+
+h1 a:hover {
+	color: white;
+	opacity: 0.8;
+}
+
+table#newsIndexTable td{
+	line-height: 2;
+}
+
+table button.btn {
+	margin: 0 2px;	
+}
+
+#send {
+  width: 100%;
+}
+
+.userName {
+  text-align: center;
+}
+
+.postLink{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: all .5s;
+}
+
+.postLink i{
+  font-size: 20px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.fadeDisplay {
+  display: none;
+}
