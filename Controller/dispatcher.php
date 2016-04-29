@@ -5,7 +5,6 @@
 class dispatcher {
 
 	private $sysRoot;
-	private $helpers;
 
 	function __construct($s) {
 		$this->sysRoot = $s;
@@ -83,6 +82,13 @@ class dispatcher {
 						require_once $this->sysRoot . '/Controller/loginController.php';
 						$controllerInstance = new loginController($this->sysRoot);
 					}
+					break;
+
+				case 'logout' :
+
+					$auth->logout();
+					header('Location: /login');
+
 					break;
 
 				case 'truncate':

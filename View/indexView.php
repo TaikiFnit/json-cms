@@ -14,7 +14,7 @@
 		</div>
 	</section>
 
-	<button type="button" id="truncateNews" class="btn btn-danger btn-flat btn-sm fadeDisplay">すべての記事を削除</button>
+	<button type="button" id="truncateNews" class="btn btn-danger btn-flat btn-sm fadeDisplay">すべての記事と画像を削除</button>
 
 	<a href="/post" class="postLink"><button type="button" class="btn btn-fab btn-raised btn-material-red"><i class="glyphicon glyphicon-pencil"></i></button></a>
 </main>

@@ -19,7 +19,7 @@ class deleteNewsModel extends appModel
 
 	function run() {
 
-		$sql = 'delete from news where id = :id';
+		$sql = 'delete from news where news_id = :id';
 
 		$values = array(':id'=>$this->id);
 

@@ -16,8 +16,6 @@ class postImgModel extends appModel
 
 	function run() {
 
-		//define('UPDIR', '/var/www/vhosts/hira-tech.net/subdomains/ta/httpdocs');
-
 		//$updir = UPDIR . '/public' . NEWS_IMAGE_PATH;
 
 		// 画像をpublic/news_images/にsave

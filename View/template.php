@@ -19,7 +19,8 @@
 
 	<link rel="stylesheet" href="/stylesheets/style.css">
 
-	<script src="/components/jquery.js"></script>
+	<!--script src="/components/jquery.js"></script-->
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
 
 	<!-- bootstrap -->
 	<script src="/components/bootstrap/js/bootstrap.js"></script>

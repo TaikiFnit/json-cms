@@ -24,9 +24,12 @@ function getNewsData(callback) {
 		method: 'GET',
 		dataType: 'json',
 		success: function(data) {
+			console.log('in success');
 			callback(null, data);
 		},
 		error: function(e) {
+			console.log('in err');
+			console.log(e);
 			callback(e, null);
 		}
 	});

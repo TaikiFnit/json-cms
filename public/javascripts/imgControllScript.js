@@ -8,7 +8,7 @@ $(function() {
 
 			console.log(data);
 
-			var url = 'http://ta.hira-tech.net/news_image/';
+			var url = '/news_image/';
 
 			var code = '';
 
@@ -41,7 +41,7 @@ $(function() {
 			$('#imgIndexArea').html(code);
 		},
 		error: function(err) {
-			alert(err);
+			console.log(err);
 		}
 	});
 });
@@ -115,12 +115,12 @@ $('#uploadForm #send').on('click', function() {
 		processData: false,
 		// ContentTypeをfalseに指定
 		contentType: false,
-		
+
 		success: function(data) {
 			console.log(data);
 
 			if(data.result) {
-				alert('画像のアップロードに成功しました。');	
+				alert('画像のアップロードに成功しました。');
 				location.reload();
 			}
 			else {

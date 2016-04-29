@@ -16,7 +16,6 @@ class newsController
 		$this->method = $m;
 	}
 
-
 	function run() {
 
 		// レンタルサーバーではPUT METHODが使用できないためPOSTで代用
@@ -44,7 +43,7 @@ class newsController
 		// run the func
 		$response = $methodModel->run();
 
-		header("Access-Control-Allow-Origin: *");
+		//header("Access-Control-Allow-Origin: *");
 
 		// display the data as json
 		echo json_encode($response);

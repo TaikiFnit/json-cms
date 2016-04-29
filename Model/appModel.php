@@ -5,7 +5,7 @@
 */
 class appModel
 {
-	
+
 	protected function connectDB()
 	{
 		try {
@@ -15,10 +15,10 @@ class appModel
 			);
 
 			return new PDO(DSN, DB_USER, DB_PASSWORD, $options);
-			
+
 		} catch (PDOException $e) {
 			$e->getMessage();
-			exit;	
+			exit;
 		}
 	}
 
@@ -67,7 +67,7 @@ class appModel
 
 	protected function ftpFileList($path) {
 
-		$result;	
+		$result;
 
 		$conn_id = ftp_connect(FTP_SERVER);
 

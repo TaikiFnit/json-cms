@@ -1,5 +1,9 @@
 $(function() {
 
+	var date = new Date();
+	var created = (date.getFullYear()) + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + (date.getDate())).slice(-2);
+	$('#created').val(created);
+
 	// 記事の送信
 	$('#postForm #send').on('click', function() {
 
@@ -63,29 +67,19 @@ $(function() {
 	});
 
 	function setVal() {
-		if($('#images').val() <= 0) {
-			$('#images').val(0);
+
+		for(var i = 1; i < 10; i++) {
+			if(i <= $('#images').val()) {
+				$('.image' + i).show();
+			}
+			else {
+				$('.image' + i).hide();
+			}
 		}
 
-		if($('#images').val() == 0) {
-			$('.image1').fadeOut('fast');
-			$('.image2').fadeOut('fast');
-		}
-
-		if($('#images').val() == 1) {
-			$('.image1').fadeIn('fast');
-			$('.image2').fadeOut('fast');
-		}
-
-		if($('#images').val() == 2) {
-			$('.image1').fadeIn('fast');
-			$('.image2').fadeIn('fast');
-		}
-
-		if($('#images').val() >= 3) {
-			$('.image1').fadeIn('fast');
-			$('.image2').fadeIn('fast');
-			$('#images').val(2);
+		// 現在の画像送付可能数の最大値: 9 (formを動的に生成してないため)
+		if( $('#images').val() >= 10 ) {
+			$('#images').val(9);
 		}
 	}
 });

@@ -1,12 +1,24 @@
 <?php
 
 // DB接続に必要な設定
-define('DB_NAME', 'json-cms');
+define('DB_NAME', 'db_name');
 define('DSN', 'mysql:host=localhost;dbname=' . DB_NAME);
 define('DB_USER', 'user');
 define('DB_PASSWORD', 'password');
 
 // 画像の保存に関する設定
 define('NEWS_IMAGE_PATH', '/news_image/');
+
+//  画像のアップロードに必要な設定
+define('FTP_SERVER', 'ftp_server_name');
+define('FTP_USER_NAME', 'ftp_user_name');
+define('FTP_USER_PASS', 'ftp_user_password');
+
+// アップロード先のパス
+define('REMOTE_FILE', '/public/news_image/');
+
+// debug configration
+//ini_set('display_errors','On');
+//error_reporting(E_ALL);
 
 error_reporting(E_ALL & ~E_NOTICE);
