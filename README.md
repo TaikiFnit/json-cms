@@ -14,10 +14,8 @@ SimpleなPHPによるCMS.
 ## How to use
 1. config.php, users.phpを設定する。
 dirctory内に、config.php.default, users.php.defaultが存在するので、これをコピーして、新たに2つのファイルを配置し、データベースの情報と、ユーザー情報をsettingします。
----
 2. DBの作成, テーブルの作成を行う。
 データベース名は任意、テーブルの構造は、/sql/setup.sqlに記述してあるSQL文を読み込むことにより、作成が完了します。
----
 3. Apache等のウェブサーバーに配置。
 PHP, MySQLが使えるウェブサーバーにすべてのディレクトリをUploadすることにより、このシステムが使えるようになります。
 
@@ -36,7 +34,7 @@ setup.sql内に書いてあるSQL文をコピーして、作成したデータ�
 ## 通信仕様
 get bellows url, return bellows json data.
 
-### GET http://example.com/news/*
+### GET /news/*
 管理画面より、作成したnewsの一覧情報がjson形式でresponse.
 使用したいサイトでAjaxなどでGETすると記事の一覧情報が得られる
 
@@ -55,7 +53,7 @@ get bellows url, return bellows json data.
 
 ---
 
-### GET http://example.com/news/1 (1はid)
+### GET /news/1 (1はid)
 管理画面より、作成したnewsの情報がjson形式でresponse.
 使用したいサイトでAjaxなどでGETすると記事の情報が得られる
 
